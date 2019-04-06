@@ -1,0 +1,16 @@
+.mod_wickedweather ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin: 0; }
+  .mod_wickedweather ul li {
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-right: 0.5rem;
+    padding: 0; }
+    .mod_wickedweather ul li ~ li {
+      margin-right: 0; }
+    .mod_wickedweather ul li img {
+      height: 1.25rem; }
+
+/*# sourceMappingURL=wickedweather.css.map */

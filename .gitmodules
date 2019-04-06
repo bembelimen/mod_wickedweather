@@ -1,0 +1,3 @@
+[submodule "modules/mod_wickedweather/media/icons"]
+	path = modules/mod_wickedweather/media/icons
+	url = git@github.com:manifestinteractive/weather-underground-icons.git

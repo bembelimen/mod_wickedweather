@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.9" client="site" method="upgrade">
+	<name>mod_wickedweather</name>
+	<author>Benjamin Trenkle</author>
+	<creationDate>April 2019</creationDate>
+	<copyright>Copyright (C) 2019 Wicked Software Benjamin Trenkle. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>kontakt@wicked-software.de</authorEmail>
+	<authorUrl>www.wicked-software.de</authorUrl>
+	<version>1.0.0</version>
+	<description>MOD_WICKEDWEATHER_XML_DESCRIPTION</description>
+	<files>
+		<filename module="mod_wickedweather">mod_wickedweather.php</filename>
+		<folder>language</folder>
+		<folder>tmpl</folder>
+		<filename>helper.php</filename>
+	</files>
+	<media destination="mod_wickedweather" folder="media">
+		<folder>css</folder>
+		<folder>icons</folder>
+		<folder>scss</folder>
+	</media>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+					name="city_id"
+					type="text"
+					label="MOD_WICKEDWEATHER_PARAM_CITY_ID_LABEL"
+					required="true"
+				/>
+
+				<field
+					name="city_id_description"
+					type="spacer"
+					label="MOD_WICKEDWEATHER_PARAM_UCITY_ID_DESCRIPTION_LABEL"
+				/>
+
+				<field
+					name="unit"
+					type="list"
+					label="MOD_WICKEDWEATHER_PARAM_UNIT_LABEL"
+				>
+					<option value="">MOD_WICKEDWEATHER_PARAM_UNIT_KELVIN</option>
+					<option value="imperial">MOD_WICKEDWEATHER_PARAM_UNIT_FAHRENHEIT</option>
+					<option value="metric">MOD_WICKEDWEATHER_PARAM_UNIT_CELCIUS</option>
+				</field>
+
+				<field
+					name="color"
+					type="list"
+					label="MOD_WICKEDWEATHER_PARAM_COLOR_LABEL"
+					default="solid-black"
+				>
+					<option value="solid-black">MOD_WICKEDWEATHER_PARAM_COLOR_OPTION_SOLID_BLACK</option>
+					<option value="solid-white">MOD_WICKEDWEATHER_PARAM_COLOR_OPTION_SOLID_WHITE</option>
+					<option value="black">MOD_WICKEDWEATHER_PARAM_COLOR_OPTION_BLACK</option>
+					<option value="white">MOD_WICKEDWEATHER_PARAM_COLOR_OPTION_WHITE</option>
+				</field>
+
+				<field
+					name="apikey"
+					type="text"
+					label="MOD_WICKEDWEATHER_PARAM_APIKEY_LABEL"
+					required="true"
+				/>
+				<!-- <field
+					name="updatemethod"
+					type="radio"
+					label="MOD_WICKEDWEATHER_PARAM_UPDATEMETHOD_LABEL"
+					class="btn-group btn-group-yesno"
+					default="0"
+					filter="options"
+					>
+					<option value="1">MOD_WICKEDWEATHER_PARAM_UPDATEMETHOD_LIVE</option>
+					<option value="0">MOD_WICKEDWEATHER_PARAM_UPDATEMETHOD_CRONJOB</option>
+				</field>
+
+				<field
+					name="updatemethod_cronjob"
+					type="spacer"
+					label="MOD_WICKEDWEATHER_PARAM_UPDATEMETHOD_DESCRIPTION_LABEL"
+					showon="updatemethod:0"
+				/> -->
+			</fieldset>
+			<fieldset name="advanced">
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC"
+				/>
+
+				<field
+					name="moduleclass_sfx"
+					type="textarea"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC"
+					rows="3"
+				/>
+
+				<field
+					name="cache"
+					type="list"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC"
+					default="0"
+					filter="integer"
+					>
+					<option value="1">JGLOBAL_USE_GLOBAL</option>
+					<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+
+				<field
+					name="cache_time"
+					type="number"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC"
+					default="0"
+					filter="integer"
+				/>
+
+				<field
+					name="cachemode"
+					type="hidden"
+					default="itemid"
+					>
+					<option value="itemid"></option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>
