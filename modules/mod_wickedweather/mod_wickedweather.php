@@ -9,10 +9,8 @@
 
 defined('_JEXEC') or die;
 
-// Include the breadcrumbs functions only once
 JLoader::register('ModWickedWeatherHelper', __DIR__ . '/helper.php');
 
-// Get the breadcrumbs
 $weather  = ModWickedWeatherHelper::getWeather($params);
 
 if (!$weather)
